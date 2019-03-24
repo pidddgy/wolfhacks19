@@ -10,6 +10,8 @@ const config = {
 firebase.initializeApp(config);
 const db = firebase.database();
 
+
+
 // const a = db.ref().push().key;
 // console.log(a);
 // console.log(a);
