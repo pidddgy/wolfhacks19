@@ -1,5 +1,3 @@
-
-import {newChat} from "./newChat";
 const config = {
     apiKey: "AIzaSyD--fcGZUlW6qZny-GRCaHZhOq498ZBENw",
     authDomain: "wolfhacks19.firebaseapp.com",
@@ -11,5 +9,4 @@ const config = {
 
 firebase.initializeApp(config);
 
-var a = newChat;
-a.newChat();
+newChat();
