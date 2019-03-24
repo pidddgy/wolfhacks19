@@ -3,14 +3,30 @@
 <head>
 <link rel="stylesheet" href="./css/wolfhacks19.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+  <script src="js/Message.js"></script>
+  <script src = "./js/newMesage.js"> </script>
+  <script src = "./js/addUser.js"> </script>
+  <script src="./js/updateContent.js"></script>
+  <script src="./js/submitForm.js"></script>
+  <script src="./js/main.js"></script>
+
+
+
 </head>
 <body>
-<div class="container">
-<h3 class=" text-center">Messaging</h3>
-<div class="messaging">
+<div class="row mx-md-n5">
+  <div class="col px-md-5"><div class="p-3 border bg-light"><h3>Messages</h3></div></div>
+  <div class="col px-md-5"><div class="p-3 border bg-light"><nav>
+            <form class="form-inline">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick = "loginwgoog()">Log in With Google</button>
+            </form>
+
+  </nav></div></div>
+</div>
       <div class="inbox_msg">
         <div class="inbox_people">
           <div class="headind_srch">
