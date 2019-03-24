@@ -50,9 +50,8 @@
               <div class="chat_people">
                 <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
+                  <h5>Sunil Rajput <span class="chat_date">Today</span></h5>
+                  <p>...</p>
                 </div>
               </div>
             </div>
@@ -60,9 +59,8 @@
               <div class="chat_people">
                 <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
+                  <h5>Omar Salazaar<span class="chat_date">March 25</span></h5>
+                  <p>Can you meet me at the mall at 6?</p>
                 </div>
               </div>
             </div>
@@ -71,7 +69,7 @@
         <div class="mesgs" >
           <div class="msg_history" id="messageList">
 
-            <div class="incoming_msg">
+            <div class="incoming_msg", visibility="hidden">
               <div class="received_msg">
                 <div class="received_withd_msg">
                   <p>Test which is a new approach to have all
@@ -85,14 +83,15 @@
                 <p>Test which is a new approach to have all
                   solutions</p>
                 <span class="time_date"> Bob </span> </div>
-            </div>
+            </div>!-->
             
           </div>
 
           <div class="type_msg">
             <div class="input_msg_write">
-              <input type="text" id = "messageSender" class="write_msg" placeholder="Type a message" />
-              <button class="msg_send_btn" type="button" onclick="sendMsg()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+              <input type="text" id="messageSender" class = "write_msg" onkeypress="return searchKeyPress(event);" />
+              <!--<input type="text" id = "messageSender" class="write_msg" placeholder="Type a message" />!-->
+              <button id="btnSearch" class="msg_send_btn" type="button" onclick="sendMsg()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
             </div>
           </div>
         </div>
