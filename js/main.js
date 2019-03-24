@@ -113,12 +113,16 @@ demoRef.on('value', function(ss) {
   
 
 function sendMsg() {
+
 	var messageTxt = document.getElementById("messageSender").value;
-	messageTxt = translateToEng(messageTxt);
-  db.ref("demo").push({
-    author: firebase.auth().currentUser.uid,
-    text: messageTxt,
-  }) 
+	if(messageTxt != ""){
+		messageTxt = translateToEng(messageTxt);
+		  db.ref("demo").push({
+		    author: firebase.auth().currentUser.uid,
+		    text: messageTxt,
+		  }) 
+	}
+	
 
   document.getElementById("messageSender").value = "";
 }
