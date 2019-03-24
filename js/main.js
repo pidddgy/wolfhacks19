@@ -11,6 +11,16 @@ firebase.initializeApp(config);
 const db = firebase.database();
 
 
+// MAKE SURE YOU USE AN HTTP SERVER OR ELSE THIS WONT WORK
+// do " python -m SimpleHTTPServer 8080 " in this directory
+
+var user;
+function loginwgoog() {
+  var provider = new firebase.auth.GoogleAuthProvider();
+  firebase.auth().signInWithRedirect(provider);
+  //console.log(firebase.auth().currentUser.email);
+}
+
 
 // const a = db.ref().push().key;
 // console.log(a);
