@@ -8,5 +8,23 @@ const config = {
   };
 
 firebase.initializeApp(config);
+const db = firebase.database();
 
-newChat();
+// const a = db.ref().push().key;
+// console.log(a);
+// console.log(a);
+
+// newMessage(a, {
+//   author:"sdfsdf",
+//   message:"sdlfsdf",
+//   time:"sdfsdf",
+// });
+
+// newMessage(a, {
+//   author:"sdfsdf",
+//   message:"sdlfssdfdsfdssdfdf",
+//   time:"sdfsdf",
+// });
+
+// addUser("sdfsdf", a);
+// addUser("sdflksdjfldksfsd", a);
