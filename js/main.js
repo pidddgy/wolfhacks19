@@ -9,7 +9,7 @@ const config = {
 
   var userLang = "fr";
 
-var token = "Bearer ya29.c.ElrXBg4L1ksFs1ZiNA8tPN-PgVhMRfwnO4PNWI_Y0oDe9OR-W5shxYOlVTktixPilsBFzcWFP7NVz7FcWBM7yxDuIbSwLGjVjucNgBXCQCnyDykD1QyzxScJIgk";
+var token = "Bearer ya29.c.ElrXBvtU7nye0TUanv3XqyxsdvIDGcMhsBTuhXszs0COLxYRfZAWf8KNY50FAEtFWWjZaoVfCcl64A7NuQtwIDZcmZE_136y2cMzjMHUlV_Zpsh9cHm2YbTbd1E";
 
         function translateToEng(msg){
     var from = detectLang(msg);
