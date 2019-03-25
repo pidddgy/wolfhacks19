@@ -7,7 +7,9 @@ const config = {
     messagingSenderId: "189830752995"
   };
 
-var token = "Bearer ya29.c.ElrXBj1BZGO0J-JiPJ-TWO0vmTGCvz-KIP3COJlFQ_GCk9mdtHM8Rj0lARucQet3LXMy-ZHGHw8XCt1eUq_JijRC-qaAP269Ul2TCgWugdJcd5QkLvFlt6JCm8c";
+  var userLang = "fr";
+
+var token = "Bearer ya29.c.ElrXBg4L1ksFs1ZiNA8tPN-PgVhMRfwnO4PNWI_Y0oDe9OR-W5shxYOlVTktixPilsBFzcWFP7NVz7FcWBM7yxDuIbSwLGjVjucNgBXCQCnyDykD1QyzxScJIgk";
 
         function translateToEng(msg){
     var from = detectLang(msg);
@@ -72,6 +74,12 @@ function loginwgoog() {
   });
 }
 
+function imWorking(element){
+  var temp =element.children[0];
+  //var asdf = temp.innerHTML;
+  alert(translateFromEng(temp.innerHTML, userLang));
+}
+
 var demoRef = db.ref("/demo");
 demoRef.on('value', function(ss) {
   
@@ -87,18 +95,21 @@ demoRef.on('value', function(ss) {
   //   //document.getElementById("messageList").innerHTML += data;
   // }
   
+  
+
   Object.keys(ss.val()).forEach(function(msg) {
     var data = "";
     if(ss.val()[msg].author == firebase.auth().currentUser.uid) {
         data = data+"<div class=\"outgoing_msg\">";
-        data = data+"<div class=\"sent_msg\">";
-        data = data+"<p>" + ss.val()[msg].text + " </p> ";
+        data = data+"<div class=\"sent_msg\" onclick=\"imWorking(this);\">";
+        data = data+"<p>" + ss.val()[msg].text + "</p> ";
         data = data+"<span class=\"time_date\"> "+ ss.val()[msg].author + "+ </span>"
         data = data+"</div> </div>";
+        console.log(data);
     } else {
         data = data+"<div class=\"incoming_msg\">";
         data = data+"<div class=\"received_msg\">";
-        data = data+"<div class=\"received_withd_msg\">";
+        data = data+"<div class=\"received_withd_msg\" onclick=\"imWorking(this);\">";
         data = data+"<p>" + ss.val()[msg].text + " </p> ";
         data = data+"<span class=\"time_date\"> "+ ss.val()[msg].author + "+ </span>"
         data = data+"</div> </div>";
